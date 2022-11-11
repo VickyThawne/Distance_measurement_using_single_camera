@@ -1,28 +1,16 @@
-"""
--------------------------------------------
--    Author: Asadullah Dal                -
--    =============================        -
--    Company Name: AiPhile                -
--    =============================        -
--    Purpose : Youtube Channel            -
--    ============================         -
--    Link: https://youtube.com/c/aiphile  -
--------------------------------------------
-"""
-
 import cv2
 
 # variables
 # distance from camera to object(face) measured
-KNOWN_DISTANCE = 76.2  # centimeter
+KNOWN_DISTANCE = 40  # centimeter
 # width of face in the real world or Object Plane
-KNOWN_WIDTH = 14.3  # centimeter
+KNOWN_WIDTH = 19  # centimeter
 # Colors
 GREEN = (0, 255, 0)
 RED = (0, 0, 255)
 WHITE = (255, 255, 255)
 fonts = cv2.FONT_HERSHEY_COMPLEX
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 # face detector object
 face_detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
@@ -75,7 +63,7 @@ def face_data(image):
 
 
 # reading reference image from directory
-ref_image = cv2.imread("Ref_image.png")
+ref_image = cv2.imread("rf.png")
 
 ref_image_face_width = face_data(ref_image)
 focal_length_found = focal_length(KNOWN_DISTANCE, KNOWN_WIDTH, ref_image_face_width)

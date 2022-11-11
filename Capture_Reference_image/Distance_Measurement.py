@@ -6,7 +6,7 @@ Know_distance =30 # in centimeters
 #mine is 14.3 something, measure your face width, are google it 
 Know_width_face =14.3 #centimeters
 # chose your camera
-cam_number =1
+cam_number =0
 face_detector = cv.CascadeClassifier('data/haarcascade_frontalface_default.xml')
 camera = cv.VideoCapture(cam_number)
 def FocalLengthFinder(Measured_distance, real_width_of_face, width_of_face_in_image):
@@ -19,6 +19,7 @@ def Distance_Measurement(face_real_width, Focal_Length, face_with_in_image):
    return distance 
 def Face_Detection(image):
     f_width =0
+    print(type(image))
     Gray_image = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     faces = face_detector.detectMultiScale(Gray_image, 1.3, 5)
     for (x, y, h, w) in faces:
@@ -26,7 +27,7 @@ def Face_Detection(image):
         f_width =w
     print(f_width)
     return f_width, image
-reference_image =cv.imread("rf.png")
+reference_image = cv.imread("rf.png")
 face_w , image_read= Face_Detection(reference_image)
 cv.imshow("ref", image_read)
 calculate_focal_length =FocalLengthFinder(Know_distance, Know_width_face,face_w)

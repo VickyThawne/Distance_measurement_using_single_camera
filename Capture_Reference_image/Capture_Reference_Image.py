@@ -4,7 +4,7 @@ import time
 import os
 # chose your camera number:
 cam_number =2
-camera = cv2.VideoCapture(cam_number)
+camera = cv2.VideoCapture(0)
 starting_time =time.time()
 Frame_Counter= 0
 Cap_frame =0 

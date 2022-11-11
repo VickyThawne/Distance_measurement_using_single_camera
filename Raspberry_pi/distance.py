@@ -1,15 +1,3 @@
-"""
--------------------------------------------
--    Author: Asadullah Dal                -
--    =============================        -
--    Company Name: AiPhile                -
--    =============================        -
--    Purpose : Youtube Channel            -
--    ============================         -
--    Link: https://youtube.com/c/aiphile  -
--------------------------------------------
-"""
-
 import cv2 as cv
 import time
 import AiPhile

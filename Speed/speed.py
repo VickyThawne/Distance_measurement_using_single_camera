@@ -1,16 +1,3 @@
-
-'''
--------------------------------------------
--    Author: Asadullah Dal                -
--    =============================        -
--    Company Name: AiPhile                -
--    =============================        -
--    Purpose : Youtube Channel            -
--    ============================         -
--    Link: https://youtube.com/c/aiphile  -
--------------------------------------------
-'''
-
 import cv2
 import time
 # variables
