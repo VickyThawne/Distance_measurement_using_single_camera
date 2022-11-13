@@ -1,0 +1,10 @@
+# Focal_Length up_sp Function Discrption (Doc String)
+    '''
+    This Function Calculate the Focal Length(distance between lens to CMOS sensor), it is simple constant we can find by using 
+    MEASURED_DISTACE, REAL_WIDTH(Actual width of object) and WIDTH_OF_OBJECT_IN_IMAGE 
+    :param1 Measure_Distance(int): It is distance measured from object to the Camera while Capturing Reference image
+
+    :param2 Real_Width(int): It is Actual width of object, in real world (like My face width is = 5.7 Inches)
+    :param3 Width_In_Image(int): It is object width in the frame /image in our case in the reference image(found by Face detector) 
+    :retrun Focal_Length(Float):
+    '''

@@ -3,7 +3,7 @@ import cv2
 # variables
 # distance from camera to object(face) measured
 Known_distance = 30  # Inches
-# mine is 14.3 something, measure your face width, are google it
+# face width
 Known_width = 5.7  # Inches
 
 # Colors  >>> BGR Format(BLUE, GREEN, RED)

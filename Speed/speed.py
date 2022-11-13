@@ -10,9 +10,9 @@ listDistance = []
 listSpeed = []
 
 # distance from camera to object(face) measured
-Known_distance = 76.2  # centimeter
+Known_distance = 30  # centimeter
 # width of face in the real world or Object Plane
-Known_width = 14.3  # centimeter
+Known_width = 17  # centimeter
 # Colors
 GREEN = (0, 255, 0)
 RED = (0, 0, 255)
@@ -103,7 +103,7 @@ def averageFinder(completeList, averageOfItems):
 
 
 # reading reference image from directory
-ref_image = cv2.imread("Ref_image.png")
+ref_image = cv2.imread("/rf.png")
 
 ref_image_face_width = face_data(ref_image)
 Focal_length_found = FocalLength(

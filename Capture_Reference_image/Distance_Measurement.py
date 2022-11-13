@@ -27,7 +27,7 @@ def Face_Detection(image):
         f_width =w
     print(f_width)
     return f_width, image
-reference_image = cv.imread("rf.png")
+reference_image = cv.imread("rf1.png")
 face_w , image_read= Face_Detection(reference_image)
 cv.imshow("ref", image_read)
 calculate_focal_length =FocalLengthFinder(Know_distance, Know_width_face,face_w)

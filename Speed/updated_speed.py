@@ -3,7 +3,7 @@ import time
 
 # variables
 # distance from camera to object(face) measured
-Known_distance = 30  # Inches
+Known_distance = 12  # Inches
 # mine is 14.3 something, measure your face width, are google it
 Known_width = 5.7  # Inches
 
@@ -44,16 +44,7 @@ face_detector = cv2.CascadeClassifier("../haarcascade_frontalface_default.xml")
 
 
 def FocalLength(measured_distance, real_width, width_in_rf_image):
-    # Function Discrption (Doc String)
-    '''
-    This Function Calculate the Focal Length(distance between lens to CMOS sensor), it is simple constant we can find by using 
-    MEASURED_DISTACE, REAL_WIDTH(Actual width of object) and WIDTH_OF_OBJECT_IN_IMAGE 
-    :param1 Measure_Distance(int): It is distance measured from object to the Camera while Capturing Reference image
-
-    :param2 Real_Width(int): It is Actual width of object, in real world (like My face width is = 5.7 Inches)
-    :param3 Width_In_Image(int): It is object width in the frame /image in our case in the reference image(found by Face detector) 
-    :retrun Focal_Length(Float):
-    '''
+    
     focal_length = (width_in_rf_image * measured_distance) / real_width
     return focal_length
 # distance estimation function
@@ -149,7 +140,7 @@ def averageFinder(valuesList, numberElements):
 
 
 # reading reference image from directory
-ref_image = cv2.imread("../Ref_image.png")
+ref_image = cv2.imread("../rf.png")
 
 ref_image_face_width, _, _, _ = face_data(ref_image, False, Distance_level)
 Focal_length_found = FocalLength(
